@@ -2,10 +2,16 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Paper, Typography } from "@material-ui/core";
 import account1 from "../../assets/images/account3.png";
+import rightDoc from "../../assets/images/rightDoc.jpeg"
 
 const useStyles = makeStyles((theme) => ({
     rootDiv: {
-      backgroundColor:'white',
+      height:'100vh',
+      backgroundImage: `url(${rightDoc})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    alignItems: "center",
     },
     firstDiv: {
       position: "relative",

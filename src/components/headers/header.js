@@ -242,6 +242,7 @@ function Header(props) {
               ))}
             </Box>
            {(!window.location.pathname.includes('profile')) && <Button
+           onClick={()=>history.push('/login')}
               sx={{
                 backgroundColor: "#0190B0",
                 width: "230px",

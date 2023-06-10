@@ -15,6 +15,11 @@ import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import rightDoc from "../../assets/images/rightDoc.jpeg";
 import Account from "../Account/account";
+import OwnReports from "../OwnReports/ownreports";
+import FamilyReports from "../familyreports/familyreport";
+import SharedReports from "../../pages/sharedreports/shared"
+import AddCustomize from "../addandcustomize/addcustomize";
+import ArchiveReports from "../archive/archive";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -295,8 +300,12 @@ function LeftMenu() {
         ) : (
           <div>
             {activePage === "Account" && <Account />}
-            {/* {activePage === "inbox" && <InboxPage />}
-            {activePage === "drafts" && <DraftsPage />} */}
+            {activePage === "Own Reports" && <OwnReports />}
+            {activePage === "Family Reports" && <FamilyReports />}
+            {activePage==="Shared Reports" && <SharedReports />}
+            {activePage==="AddCustomize" && <AddCustomize />}
+            {activePage==="Archive Reports" && <ArchiveReports />}
+            
           </div>
         )}
       </div>

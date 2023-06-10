@@ -3,6 +3,7 @@ import { TextField, Button, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import docter from "../../assets/images/loginDoc.jpeg";
 import rightDoc from "../../assets/images/rightDoc.jpeg";
+import { useHistory } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   form: {
     margin: "auto",
@@ -102,7 +103,7 @@ function Login() {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-
+  const history=useHistory()
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic here
@@ -154,6 +155,7 @@ function Login() {
                 />
               </Grid>
               <Typography
+               onClick={()=>history.push('/register')}
                 variant="subtitle2"
                 style={{ marginTop: "50px", marginLeft: "60px" }}
               >
